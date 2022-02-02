@@ -1,4 +1,4 @@
-package com.example.messenger.model;
+package com.example.massanger.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

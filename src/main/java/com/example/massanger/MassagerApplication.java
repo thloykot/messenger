@@ -1,13 +1,13 @@
-package com.example.messenger;
+package com.example.massanger;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-@SpringBootApplication
-public class MessengerApplication {
 
+@SpringBootApplication
+public class MassagerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MessengerApplication.class, args);
+        SpringApplication.run(MassagerApplication.class, args);
     }
 
 }

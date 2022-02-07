@@ -14,15 +14,12 @@ body{
 }
 
 #chat{
-	background-color: rgb(250,250,250,0.6);
+	background-color:rgba(256,256,256,0.6);
 	margin: auto;
   	width: 50%;
   	height: 800px;
-
 }
-#margspan{
-	margin: 4px;
-}
-#button{
-	
+.massage-window{
+	background-color: #0888ce;
+	border-radius: 10px;
 }

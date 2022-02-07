@@ -5,10 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Setter
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserForm {
-    String username;
+@Setter
+@Getter
+public class Token {
+    private String token;
 }

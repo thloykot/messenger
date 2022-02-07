@@ -15,7 +15,7 @@ public class RedisServiceImpl implements RedisService {
 
     @Override
     public void save(UserForm form) {
-        redisDao.save(form.getToken(), form.getUsername());
+        //redisDao.save(form.getToken(), form.getUsername());
     }
 
     @Override

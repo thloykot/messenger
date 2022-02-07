@@ -1,12 +1,13 @@
 <div ng-controller='regCtl'>
 
+    <title>Register Please</title>
     <link rel="stylesheet" type="text/css" href="register-page/register-stylesheet.css">
     <form ng-submit="reg()">
+        <h1 class="comment">Enter your name</h1>
         <lebel  class="custom-field">
             <input type="text" ng-model="user.name" id="nameInput" required>
             <span class="placeholder">name</span>
         </lebel>
         <button type="submit" >submit</button>
-        <a  href="#!chat">test</a>
     </form>
 </div>

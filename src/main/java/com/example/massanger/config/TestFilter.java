@@ -15,8 +15,6 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class TestFilter extends OncePerRequestFilter {
 
-    private final RedisService redisService;
-
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
@@ -31,10 +29,6 @@ public class TestFilter extends OncePerRequestFilter {
     }
 
     private boolean isAuthorized(HttpServletRequest request) {
-        String tokenHeader = request.getHeader("Token");
-        if (tokenHeader != null) {
-            return redisService.isUserPresent(tokenHeader);
-        }
-        return false;
+        return request.getHeader("Token") != null;
     }
 }

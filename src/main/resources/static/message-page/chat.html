@@ -1,7 +1,11 @@
 <div ng-controller="chatCtl">
     <form ng-submit="headerTest()">
         <link rel="stylesheet" type="text/css" href="message-page/chat-stylesheet.css">
-        <div id="chat"><span>{{data}}</span></div>
+        <div class="scroll" id="chat" style="overflow-y: scroll;scrollbar-width:none">
+            <span ng-repeat="m in massages" >
+                <p class="massage-window">{{m.username}} : {{m.massage}}</p>
+            </span>
+        </div>
         <div>
 
         <span id="margspan">

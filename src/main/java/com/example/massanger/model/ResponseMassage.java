@@ -1,19 +1,16 @@
 package com.example.massanger.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
 
 import java.io.Serializable;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
+@Value
 public class ResponseMassage implements Serializable {
 
-    private String massage;
+    String massage;
 
-
+    public ResponseMassage(@JsonProperty("massage") String massage) {
+        this.massage = massage;
+    }
 }

@@ -1,6 +1,5 @@
 package com.example.massanger.config;
 
-import com.example.massanger.service.RedisService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -22,8 +21,12 @@ public class TestFilter extends OncePerRequestFilter {
                 request.getRequestURI().equals("/registration") ||
                 isAuthorized(request)) {
 
-            filterChain.doFilter(request, response);
+
+
+        } else {
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         }
+        filterChain.doFilter(request, response);
 
 
     }

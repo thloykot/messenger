@@ -1,14 +1,13 @@
 package com.example.massanger.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-public class UserForm {
+@Value
+public class UserForm {//final
     String username;
+
+    public UserForm(@JsonProperty("username") String username) {
+        this.username = username;
+    }
 }

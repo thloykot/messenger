@@ -7,6 +7,7 @@ app.controller('regCtl', function ($http, $scope, $window) {
                 function success(response) {
                     $http.defaults.headers.common.Token = response.headers('Token');
                     $window.location.replace('#!chat');
+                    connect();
                 }
             )
     }

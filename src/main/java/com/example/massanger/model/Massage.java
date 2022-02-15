@@ -1,20 +1,19 @@
 package com.example.massanger.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
+@Value
 public class Massage {
-    private String massage;
-    private String username;
+    String massage, username;
 
     @Override
     public String toString() {
         return username + ":" + massage;
+    }
+
+    public Massage(@JsonProperty("massage") String massage, @JsonProperty("username") String username) {
+        this.massage = massage;
+        this.username = username;
     }
 }

@@ -20,6 +20,12 @@ body{
   	height: 800px;
 }
 .massage-window{
-	background-color: #0888ce;
+	background-color: #01b41f;
 	border-radius: 10px;
+	width: 25%;
+}
+.scroll{
+	overflow-y: scroll;
+	scrollbar-width:none;
+
 }
